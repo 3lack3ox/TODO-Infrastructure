@@ -1,0 +1,6 @@
+- name: Deploy TODO-Microservice-App
+  hosts: app
+  become: true
+  tasks:
+    - include_tasks: ../dependencies/tasks/main.yml
+    - include_tasks: ../deployment/tasks/main.yml

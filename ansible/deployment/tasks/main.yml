@@ -1,0 +1,10 @@
+- name: Clone the application repository
+  git:
+    repo: 'https://github.com/3lack3ox/TODO-Microservice-App.git'
+    dest: /home/ubuntu/TODO-Microservice-App
+    version: main
+
+- name: Deploy containers with Docker Compose
+  command: docker-compose up -d
+  args:
+    chdir: /home/ubuntu/TODO-Microservice-App
